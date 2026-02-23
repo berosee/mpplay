@@ -126,10 +126,10 @@
 
     .playlist-table { width: 100%; border-collapse: collapse; }
     .playlist-table td { 
-      padding: 6px 20px; /* 10곡 노출을 위한 간격 */
+      padding: 10px 20px; /* 10곡 노출을 위한 간격 */
       border-bottom: 1px solid rgba(255, 255, 255, 0.03); 
       cursor: pointer; 
-      font-size: 16px; 
+      font-size: 13px; 
       color: rgba(255, 255, 255, 0.7);
     }
     .playlist-table tr.active td { 
