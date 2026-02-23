@@ -13,10 +13,6 @@ const playlists = {
             "url": "music/enka/이성애 - 물방아도는내력.mp3"
         },
         {
-            "title": "이성애-물방아도는내력",
-            "url": "music/enka/이성애-물방아도는내력.mp3"
-        },
-        {
             "title": "주현미 - 스물살때 어느밤",
             "url": "music/enka/주현미 - 스물살때 어느밤.mp3"
         },
@@ -53,16 +49,12 @@ const playlists = {
     ],
     "old": [
         {
-            "title": "Agnetha Fältskog - Back On Your Radio",
-            "url": "music/old/Agnetha Fältskog - Back On Your Radio.mp3"
-        },
-        {
-            "title": "Agnetha Fältskog - When You Really Loved Someone",
-            "url": "music/old/Agnetha Fältskog - When You Really Loved Someone.mp3"
-        },
-        {
             "title": "Beyonce - TEXAS HOLD EM",
             "url": "music/old/Beyonce - TEXAS HOLD EM.mp3"
+        },
+        {
+            "title": "Bobby Darin - Early In The Morning",
+            "url": "music/old/Bobby Darin - Early In The Morning.mp3"
         },
         {
             "title": "Daniel - Blackboard of My Heart",
@@ -81,12 +73,24 @@ const playlists = {
             "url": "music/old/Isla Grant - Only Yesterday.mp3"
         },
         {
+            "title": "Jonny Cash - Cotton Fields",
+            "url": "music/old/Jonny Cash - Cotton Fields.mp3"
+        },
+        {
             "title": "Mary Duff - Just Lovin' You",
             "url": "music/old/Mary Duff - Just Lovin' You.mp3"
         },
         {
             "title": "Mary Duff - Power Of Love",
             "url": "music/old/Mary Duff - Power Of Love.mp3"
+        },
+        {
+            "title": "Mary Duff - Will You Walk With Me",
+            "url": "music/old/Mary Duff - Will You Walk With Me.mp3"
+        },
+        {
+            "title": "The Carpenters - Yesterday Once More",
+            "url": "music/old/The Carpenters - Yesterday Once More.mp3"
         }
     ]
 };
