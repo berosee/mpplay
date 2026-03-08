@@ -73,16 +73,8 @@ const playlists = {
     ],
     "old": [
         {
-            "title": "Agnetha Fältskog - When You Really Loved Someone",
-            "url": "music/old/Agnetha Fältskog - When You Really Loved Someone.mp3"
-        },
-        {
             "title": "Beyonce - TEXAS HOLD EM",
             "url": "music/old/Beyonce - TEXAS HOLD EM.mp3"
-        },
-        {
-            "title": "Bobby Darin - Early In The Morning",
-            "url": "music/old/Bobby Darin - Early In The Morning.mp3"
         },
         {
             "title": "Daniel - Blackboard of My Heart",
@@ -91,6 +83,10 @@ const playlists = {
         {
             "title": "Daniel - Pretty Little Girl From Omagh",
             "url": "music/old/Daniel - Pretty Little Girl From Omagh.mp3"
+        },
+        {
+            "title": "Green Green Grass Of Home",
+            "url": "music/old/Green Green Grass Of Home.mp3"
         },
         {
             "title": "Isla Grant - Every Moment Of Every Hour",
@@ -119,6 +115,10 @@ const playlists = {
         {
             "title": "The Carpenters - Yesterday Once More",
             "url": "music/old/The Carpenters - Yesterday Once More.mp3"
+        },
+        {
+            "title": "Tom Jones - Delilah",
+            "url": "music/old/Tom Jones - Delilah.mp3"
         }
     ]
 };

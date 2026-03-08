@@ -1,0 +1,8 @@
+python make_list.py   
+
+1 방법 :기존 주소를 싹 지우고 영어로 **cmd**라고 입력한 뒤 Enter를 누릅니다. (검은색 창이 뜹니다.)
+
+검은 창에 아래 명령어를 입력하고 엔터를 치세요.
+2 방법 :  탐색기창에 우크릭 명령창 열기 -  다음 입력- playlist_data.js 생성된다
+
+python make_list.py 
