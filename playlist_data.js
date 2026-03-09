@@ -51,24 +51,64 @@ const playlists = {
     ],
     "jazz": [
         {
-            "title": "금잔디 - 고장난벽시계",
-            "url": "music/jazz/금잔디 - 고장난벽시계.mp3"
+            "title": "Andy Williams - Love Is Blue",
+            "url": "music/jazz/Andy Williams - Love Is Blue.flac"
         },
         {
-            "title": "금잔디 - 남자라는이유로",
-            "url": "music/jazz/금잔디 - 남자라는이유로.mp3"
+            "title": "Barbra Streisand - Woman In Love",
+            "url": "music/jazz/Barbra Streisand - Woman In Love.flac"
         },
         {
-            "title": "금잔디 - 네박자",
-            "url": "music/jazz/금잔디 - 네박자.mp3"
+            "title": "Cliff Richard - The Young Ones",
+            "url": "music/jazz/Cliff Richard - The Young Ones.flac"
         },
         {
-            "title": "금잔디 - 안동역에서",
-            "url": "music/jazz/금잔디 - 안동역에서.mp3"
+            "title": "Don Backy - Casabianca",
+            "url": "music/jazz/Don Backy - Casabianca.flac"
         },
         {
-            "title": "금잔디 - 일편단심",
-            "url": "music/jazz/금잔디 - 일편단심.mp3"
+            "title": "Irene Cara - Fame",
+            "url": "music/jazz/Irene Cara - Fame.flac"
+        },
+        {
+            "title": "Jewel - Foolish Games",
+            "url": "music/jazz/Jewel - Foolish Games.flac"
+        },
+        {
+            "title": "Leif Garrett - I Was Made for Dancin'",
+            "url": "music/jazz/Leif Garrett - I Was Made for Dancin'.flac"
+        },
+        {
+            "title": "Lynn Anderson - When I Dream",
+            "url": "music/jazz/Lynn Anderson - When I Dream.flac"
+        },
+        {
+            "title": "Patti Page - Tenesee waltz",
+            "url": "music/jazz/Patti Page - Tenesee waltz.flac"
+        },
+        {
+            "title": "Righteous Brothers - Unchained melody",
+            "url": "music/jazz/Righteous Brothers - Unchained melody.flac"
+        },
+        {
+            "title": "Rod Stewart - Sailing",
+            "url": "music/jazz/Rod Stewart - Sailing.flac"
+        },
+        {
+            "title": "Scott McKenzie - San Fransisco",
+            "url": "music/jazz/Scott McKenzie - San Fransisco.flac"
+        },
+        {
+            "title": "The Beatles - Let It Be",
+            "url": "music/jazz/The Beatles - Let It Be.flac"
+        },
+        {
+            "title": "The Beatles - Yesterday",
+            "url": "music/jazz/The Beatles - Yesterday.flac"
+        },
+        {
+            "title": "Village Stompers, The - Washington Square",
+            "url": "music/jazz/Village Stompers, The - Washington Square.flac"
         }
     ],
     "old": [
@@ -119,6 +159,10 @@ const playlists = {
         {
             "title": "Tom Jones - Delilah",
             "url": "music/old/Tom Jones - Delilah.mp3"
+        },
+        {
+            "title": "dave - The Happy Organ",
+            "url": "music/old/dave - The Happy Organ.flac"
         }
     ]
 };
