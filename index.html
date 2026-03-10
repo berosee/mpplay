@@ -73,7 +73,7 @@
       width: 50px; height: 42px; display: flex; align-items: center; justify-content: center;
       cursor: pointer;
     }
-
+   /* [수정된 리스트 영역] 줄 간격을 좁혀 더 많은 곡이 보이게 함 */
     .playlist-wrapper { 
       flex: 1; 
       overflow-y: auto; 
@@ -81,20 +81,21 @@
       border-radius: 15px 15px 0 0;
       -webkit-overflow-scrolling: touch;
       margin-top: 5px;
-    }
-    
+      padding-bottom: 20px; /* 하단 여백을 살짝 줄임 */
+    }    
     .playlist-table { width: 100%; border-collapse: collapse; }
     .playlist-table td { 
-      padding: 13px 18px; 
-      font-size: 14px; 
+      /* 위아래 패딩을 13px -> 9px로 줄여 줄 간격을 좁혔습니다 */
+      padding: 9px 18px; 
+      font-size: 14px; /* 폰트 크기는 유지하여 예쁜 비율 고정 */
       border-bottom: 1px solid rgba(255,255,255,0.03); 
       color: #999; cursor: pointer; 
-    }
-    
+      line-height: 1.4; /* 글자 자체의 높이도 최적화 */
+    }    
     .playlist-table tr.active td { 
       color: var(--neon-blue); 
       font-weight: bold; 
-      background: rgba(0, 210, 255, 0.12); 
+      background: rgba(0, 210, 255, 0.15); /* 현재 곡 배경을 살짝 더 진하게 */
     }
   </style>
 </head>
