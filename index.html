@@ -3,20 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>mpplay</title>
+  <title>mpplay - Optimized</title>
   <style>
     :root {
       --neon-blue: #00d2ff;
       --deep-blue: #4a7cff;
     }
 
-    html, body { 
-      height: 100%; margin: 0; padding: 0; 
-      overflow: hidden; background: #121212; 
-    }
+    html, body { height: 100%; margin: 0; padding: 0; overflow: hidden; background: #121212; }
 
     body {
-      font-family: 'Pretendard', sans-serif;
+      font-family: 'Pretendard', -apple-system, sans-serif;
       color: #fff;
       display: flex;
       flex-direction: column;
@@ -55,47 +52,66 @@
       text-align: center; border: 1px solid rgba(0, 210, 255, 0.2);
     }
 
-    .song-info .title { font-size: 16px; font-weight: bold; margin-bottom: 12px; height: 1.2em; overflow: hidden; }
-    .status-row { display: flex; justify-content: center; align-items: center; gap: 10px; margin-bottom: 12px; }
-    .time-display { font-size: 20px; font-family: 'Arial', sans-serif; }
-    .bar-container { display: flex; gap: 3px; align-items: flex-end; height: 16px; }
+    .song-info .title { 
+      font-size: 15px; /* 약간 축소하여 세련되게 */
+      font-weight: bold; 
+      margin-bottom: 12px; 
+      height: 1.2em; 
+      overflow: hidden; 
+      color: var(--neon-blue);
+    }
+
+    .status-row { 
+      display: flex; 
+      justify-content: space-between; /* 양쪽 끝으로 배치하여 구도 개선 */
+      align-items: center; 
+      padding: 0 5px;
+      margin-bottom: 12px; 
+    }
+
+    /* [중요] 타임코드 폰트 축소 및 스타일 수정 */
+    .time-display { 
+      font-size: 13px; /* 20px -> 13px로 축소 */
+      font-family: 'Consolas', monospace; /* 숫자가 변해도 폭이 일정한 폰트 */
+      color: #888;
+    }
+
+    .bar-container { display: flex; gap: 3px; align-items: flex-end; height: 14px; }
     .bar { width: 3px; background: var(--neon-blue); border-radius: 1px; height: 4px; }
     .bar.playing { animation: bounce 0.6s ease-in-out infinite alternate; }
-    @keyframes bounce { from { height: 4px; } to { height: 16px; } }
+    @keyframes bounce { from { height: 4px; } to { height: 14px; } }
 
     .progress-container { width: 100%; cursor: pointer; padding: 5px 0; margin-bottom: 10px; }
     .progress-bg { height: 2px; background: rgba(255, 255, 255, 0.1); }
     .progress-fill { width: 0%; height: 100%; background: var(--neon-blue); }
 
-    .controls { display: flex; justify-content: center; align-items: center; gap: 20px; }
+    .controls { display: flex; justify-content: center; align-items: center; gap: 30px; }
     .btn-play-box { 
-      border: 1.5px solid #fff; border-radius: 10px;
-      width: 50px; height: 42px; display: flex; align-items: center; justify-content: center;
+      border: 1.5px solid var(--neon-blue); /* 테두리 색상 통일 */
+      border-radius: 50%; /* 원형으로 변경하여 더 현대적인 느낌 */
+      width: 46px; height: 46px; display: flex; align-items: center; justify-content: center;
       cursor: pointer;
     }
-   /* [수정된 리스트 영역] 줄 간격을 좁혀 더 많은 곡이 보이게 함 */
+
     .playlist-wrapper { 
       flex: 1; 
       overflow-y: auto; 
       background: rgba(0,0,0,0.3); 
       border-radius: 15px 15px 0 0;
       -webkit-overflow-scrolling: touch;
-      margin-top: 5px;
-      padding-bottom: 20px; /* 하단 여백을 살짝 줄임 */
+      margin-top: 10px;
     }    
     .playlist-table { width: 100%; border-collapse: collapse; }
     .playlist-table td { 
-      /* 위아래 패딩을 13px -> 9px로 줄여 줄 간격을 좁혔습니다 */
-      padding: 9px 18px; 
-      font-size: 14px; /* 폰트 크기는 유지하여 예쁜 비율 고정 */
+      padding: 10px 18px; 
+      font-size: 14px; 
       border-bottom: 1px solid rgba(255,255,255,0.03); 
       color: #999; cursor: pointer; 
-      line-height: 1.4; /* 글자 자체의 높이도 최적화 */
     }    
     .playlist-table tr.active td { 
       color: var(--neon-blue); 
       font-weight: bold; 
-      background: rgba(0, 210, 255, 0.15); /* 현재 곡 배경을 살짝 더 진하게 */
+      background: rgba(0, 210, 255, 0.1); 
     }
   </style>
 </head>
@@ -112,7 +128,7 @@
     <div class="song-info"><div class="title" id="labelTitle">곡을 선택해 주세요</div></div>
     <div class="status-row">
       <div class="bar-container" id="visualizer">
-        <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+        <div class="bar"></div><div class="bar"></div><div class="bar-playing bar"></div><div class="bar"></div>
       </div>
       <div class="time-display"><span id="curTime">00:00</span> / <span id="durTime">00:00</span></div>
     </div>
@@ -120,9 +136,9 @@
       <div class="progress-bg"><div class="progress-fill" id="progFill"></div></div>
     </div>
     <div class="controls">
-      <button style="background:none;border:none;color:#4b5563;font-size:20px;cursor:pointer;" id="btnPrev">⏮</button>
-      <div class="btn-play-box" id="btnPlayWrap"><span id="btnIcon" style="color:var(--neon-blue);font-size:24px;">▶</span></div>
-      <button style="background:none;border:none;color:#4b5563;font-size:20px;cursor:pointer;" id="btnNext">⏭</button>
+      <button style="background:none;border:none;color:#666;font-size:20px;cursor:pointer;" id="btnPrev">⏮</button>
+      <div class="btn-play-box" id="btnPlayWrap"><span id="btnIcon" style="color:var(--neon-blue);font-size:20px;">▶</span></div>
+      <button style="background:none;border:none;color:#666;font-size:20px;cursor:pointer;" id="btnNext">⏭</button>
     </div>
   </div>
 </div>
